@@ -66,7 +66,7 @@ function PublicRoute({children, isAuthenticated, ...rest}) {
           ) : (
             <Redirect
               to={{
-                pathname: '/main/account',
+                pathname: '/main',
                 state: {from: location},
               }}
             />
