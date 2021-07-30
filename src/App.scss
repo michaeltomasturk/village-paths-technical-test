@@ -14,16 +14,89 @@
     }
 }
 
+.site-layout {
+    min-height: 100vh;
+}
+
 .site-header {
     background: #fff;
     border-bottom: 5px solid #E9ECF0;
     display: flex;
     align-items: center;
+    padding: 0 1rem;
 }
 
 .site-content {
     background: #fff;
+    min-height: 100%;
 }
 
+// Main page styles
 
+.main-page {
+    min-height: calc(100vh - 64px);
+    display: flex;
+
+    .back-btn-column {
+        flex-basis: 100px;
+        display: flex;
+        justify-content: center;
+        padding-top: 5rem;
+    }
+
+    .main-content {
+        flex-basis: 100%;
+        display: flex;
+
+        .content-column {
+            padding-top: 5rem;
+            flex-basis: 60%;
+        }
+
+        .image-column {
+            padding: 5rem;
+            flex-basis: 40%;
+            display: flex;
+            justify-content: center;
+            background: rgb(244,244,245);
+            background: linear-gradient(135deg, rgba(244,244,245,1) 0%, transparent 100%);
+        }
+
+    }
+}
+
+// Antd style overrides
+
+:root {
+    --clr-primary: #36507E
+}
+
+.ant-btn, .ant-input, .ant-input-affix-wrapper {
+    border-radius: 10px !important;
+}
+
+.ant-btn-circle {
+    border-radius: 50% !important;
+}
+
+.ant-btn:hover, .ant-btn:focus {
+    color: var(--clr-primary);
+    background: #fff;
+    border-color: var(--clr-primary);
+}
+
+.ant-btn-primary {
+    color: #fff;
+    background: var(--clr-primary);
+    border-color: var(--clr-primary);
+}
+
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+    border-color: var(--clr-primary);
+}
+
+.ant-input-affix-wrapper:focus, .ant-input-affix-wrapper-focused {
+    border-color: var(--clr-primary);
+    box-shadow: none;
+}
 

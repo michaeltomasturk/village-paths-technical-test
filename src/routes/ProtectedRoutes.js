@@ -9,8 +9,8 @@ const { Content, Header } = Layout;
 function ProtectedRoutes() {
 
   return (
-    <Layout>
-      <Header className="site-header" ><Logo/> </Header>
+    <Layout className="site-layout">
+      <Header className="site-header" ><Logo/></Header>
       <Layout>
         <Content className="site-content">
           <Switch>
