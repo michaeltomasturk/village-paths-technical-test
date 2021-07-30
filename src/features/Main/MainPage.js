@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import AccountStep from './Steps/AccountStep'
 import JoinStep from './Steps/JoinStep'
 import { changeStep } from './mainSlice'
+import './style.scss'
 
 const MainPage = () => {
   const dispatch = useDispatch()

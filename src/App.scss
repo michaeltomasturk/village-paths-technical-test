@@ -31,50 +31,7 @@
     min-height: 100%;
 }
 
-// Main page styles
-
-.main-page {
-    min-height: calc(100vh - 64px);
-    display: flex;
-
-    .back-btn-column {
-        flex-basis: 200px;
-        display: flex;
-        padding-top: 5.5rem;
-        padding-left: 3rem;
-    }
-
-    .main-content {
-        flex-basis: 100%;
-        display: flex;
-
-        .content-column {
-            padding-top: 5rem;
-            max-width: 540px;
-            width: 100%;
-            margin-right: auto;
-            padding-right: 3rem;
-
-            .form{
-                padding-top: 2rem;
-            }
-        }
-
-        .image-column {
-            padding: 5rem;
-            flex-basis: 45%;
-            display: flex;
-            justify-content: center;
-            background: rgb(244,244,245);
-            background: linear-gradient(170deg, rgba(244,244,245,1) 0%, transparent 100%);
-        }
-
-    }
-}
-
-
 // Antd style overrides
-
 :root {
     --clr-primary: #36507E
 }
