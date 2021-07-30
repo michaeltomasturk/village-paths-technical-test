@@ -41,7 +41,7 @@
         flex-basis: 100px;
         display: flex;
         justify-content: center;
-        padding-top: 5rem;
+        padding-top: 5.5rem;
     }
 
     .main-content {
@@ -50,7 +50,13 @@
 
         .content-column {
             padding-top: 5rem;
-            flex-basis: 60%;
+            max-width: 540px;
+            width: 100%;
+            margin-right: auto;
+
+            .form{
+                padding-top: 2rem;
+            }
         }
 
         .image-column {
@@ -59,11 +65,14 @@
             display: flex;
             justify-content: center;
             background: rgb(244,244,245);
-            background: linear-gradient(135deg, rgba(244,244,245,1) 0%, transparent 100%);
+            background: linear-gradient(170deg, rgba(244,244,245,1) 0%, transparent 100%);
         }
 
     }
 }
+
+
+
 
 // Antd style overrides
 

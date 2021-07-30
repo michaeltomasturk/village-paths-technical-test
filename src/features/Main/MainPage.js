@@ -1,30 +1,42 @@
-import React from 'react'
+import React, { useMemo, useCallback } from 'react'
 import {  Button } from 'antd'
 import { ArrowLeftOutlined } from '@ant-design/icons'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import AccountStep from './Steps/AccountStep'
 import JoinStep from './Steps/JoinStep'
+import { changeStep } from './mainSlice'
 
 const MainPage = () => {
+  const dispatch = useDispatch()
   const step = useSelector((state) => state.main.step)
 
-  let StepComponent = null
+  const StepComponent = useMemo(() => {
+    switch(step) {
+      case 0:
+        return <AccountStep />
+      case 1:
+        return <JoinStep />
+      default:
+        return null
+    }
+  }, [step])
 
-  switch(step) {
-    case 0:
-      StepComponent = <AccountStep />
-      break;
-    case 1:
-      StepComponent = <JoinStep />
-      break;
-    default:
-      StepComponent = null
-  }
+  const onBackBtnClick = useCallback(
+    () => {
+      if(step === 0) {
+        // Probably take user to previous screen
+        console.log('Already On first step!');
+      } else {
+        dispatch(changeStep(step - 1));
+      }
+    },
+    [dispatch, step],
+  )
 
   return (
     <div className="main-page">
       <div className="back-btn-column">
-        <Button shape="circle"><ArrowLeftOutlined /></Button>
+        <Button shape="circle" onClick={onBackBtnClick}><ArrowLeftOutlined /></Button>
       </div>
       <div className="main-content">
         {StepComponent}

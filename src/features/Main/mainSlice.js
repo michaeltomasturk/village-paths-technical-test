@@ -23,5 +23,5 @@ const mainSlice = createSlice({
   },
 });
 
-export const { updateUser } = mainSlice.actions;
+export const { updateUser, changeStep } = mainSlice.actions;
 export default mainSlice.reducer;
