@@ -38,10 +38,10 @@
     display: flex;
 
     .back-btn-column {
-        flex-basis: 100px;
+        flex-basis: 200px;
         display: flex;
-        justify-content: center;
         padding-top: 5.5rem;
+        padding-left: 3rem;
     }
 
     .main-content {
@@ -53,6 +53,7 @@
             max-width: 540px;
             width: 100%;
             margin-right: auto;
+            padding-right: 3rem;
 
             .form{
                 padding-top: 2rem;
@@ -61,7 +62,7 @@
 
         .image-column {
             padding: 5rem;
-            flex-basis: 40%;
+            flex-basis: 45%;
             display: flex;
             justify-content: center;
             background: rgb(244,244,245);
@@ -70,8 +71,6 @@
 
     }
 }
-
-
 
 
 // Antd style overrides
@@ -109,3 +108,7 @@
     box-shadow: none;
 }
 
+.ant-input:focus, .ant-input-focused, .ant-input:hover {
+    border-color: var(--clr-primary);
+    box-shadow:none;
+}

@@ -36,7 +36,7 @@ const MainPage = () => {
   return (
     <div className="main-page">
       <div className="back-btn-column">
-        <Button shape="circle" onClick={onBackBtnClick}><ArrowLeftOutlined /></Button>
+        <Button shape="circle" size="large" onClick={onBackBtnClick}><ArrowLeftOutlined /></Button>
       </div>
       <div className="main-content">
         {StepComponent}

@@ -21,7 +21,10 @@ const AccountStep = () => {
           initialValues={{
             ...user,
           }}
-          onFinish={() => dispatch(changeStep(step + 1))}
+          onFinish={() => {
+            // Probably make an api call here
+            dispatch(changeStep(step + 1))}
+          }
           onValuesChange={(changedValues) => {
             dispatch(updateUser(changedValues))
           }}
@@ -80,7 +83,7 @@ const AccountStep = () => {
               },
             ]}
           >
-            <Input
+            <Input.Password
               type="password"
               placeholder="Password"
               size="large"
