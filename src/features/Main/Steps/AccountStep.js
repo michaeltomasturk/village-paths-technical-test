@@ -41,7 +41,6 @@ const AccountStep = () => {
             <Input size="large"
               type="email"
               placeholder="Email"
-              autoComplete="email"
             />
           </Form.Item>
           <Form.Item
@@ -56,7 +55,6 @@ const AccountStep = () => {
           >
             <Input size="large"
               placeholder="First Name"
-              autoComplete="firstName"
             />
           </Form.Item>
           <Form.Item
@@ -71,7 +69,6 @@ const AccountStep = () => {
           >
             <Input size="large"
               placeholder="Last Name"
-              autoComplete="lastName"
             />
           </Form.Item>
           <Form.Item
@@ -87,7 +84,6 @@ const AccountStep = () => {
               type="password"
               placeholder="Password"
               size="large"
-              autoComplete="password"
             />
           </Form.Item>
 

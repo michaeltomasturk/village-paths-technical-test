@@ -8,6 +8,8 @@ const initialState = {
     password: '',
   },
   step: 0,
+  loader: false,
+  organization: null,
 }
 
 const mainSlice = createSlice({
@@ -20,8 +22,25 @@ const mainSlice = createSlice({
     changeStep(state, action) {
       state.step = action.payload
     },
+    getOrganization(state) {
+      state.loader = true;
+    },
+    getOrganizationSuccess(state, action) {
+      state.loader = false;
+      state.organization = action.payload
+    },
+    getOrganizationFailure(state) {
+      state.loader = false;
+      state.organization = null;
+    },
   },
 });
 
-export const { updateUser, changeStep } = mainSlice.actions;
+export const {
+  updateUser,
+  changeStep,
+  getOrganization,
+  getOrganizationSuccess,
+  getOrganizationFailure,
+} = mainSlice.actions;
 export default mainSlice.reducer;
