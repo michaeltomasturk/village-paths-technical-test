@@ -36,7 +36,7 @@
     --clr-primary: #36507E
 }
 
-.ant-btn, .ant-input, .ant-input-affix-wrapper {
+.ant-btn, .ant-input, .ant-input-affix-wrapper, .ant-card-body, .ant-card {
     border-radius: 10px !important;
 }
 
@@ -69,3 +69,8 @@
     border-color: var(--clr-primary);
     box-shadow:none;
 }
+
+.ant-spin-dot-item {
+    background: var(--clr-primary);
+}
+
